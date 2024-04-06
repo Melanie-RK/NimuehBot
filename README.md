@@ -1,4 +1,4 @@
-# Discord-RPG-Bot
+# NimuehBot
 
 Default command prefix is !. To use any command, start your message with this character.
 
@@ -8,10 +8,9 @@ Default command prefix is !. To use any command, start your message with this ch
 
 Use this to set the Discord channel you would like to quote from.
 
-For example, this would tell the bot to quote from the channel with the name 'example-channel'
-
     !set_quotes_channel example-channel
 
+For example, this would tell the bot to quote from the channel with the name 'example-channel'
 
     random_quote
 
