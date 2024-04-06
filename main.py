@@ -36,5 +36,13 @@ async def random_quote(ctx):
     except discord.Forbidden:
         await ctx.send("I don't have permission to read messages in that channel")
 
+@bot.command()
+async def quote(ctx,*, arg):
+    try:
+        channel = discord.utils.get(ctx.guild.channels, name=QUOTES_CHANNEL)
+        await channel.send(arg)
+    except:
+        await ctx.send("Error occured while quoting")
+
 bot.run(TOKEN)
 
