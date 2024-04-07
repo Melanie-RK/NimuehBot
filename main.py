@@ -93,5 +93,14 @@ async def quote(ctx,*, arg):
     except:
         await ctx.send("Error occured while quoting")
 
+@bot.command()
+async def remove_quotes_channel(ctx):
+    get_from_database = quotes_channels.find_one({'server': ctx.guild.id})
+    if (get_from_database != None): 
+      await ctx.send(f"Deleted quotes channel: {get_from_database.get('channel_name')}")
+      quotes_channels.delete_one({'server': ctx.guild.id})      
+    else: 
+      await ctx.send(f"Server does not have a quotes channel")
+
 bot.run(TOKEN)
 
