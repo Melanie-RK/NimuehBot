@@ -58,18 +58,22 @@ async def set_quotes_channel(ctx, arg):
     await ctx.send(f'Quotes channel set to {arg}')
 
 async def get_quotes_channel(ctx):
-    get_from_database = quotes_channels.find_one({'server': ctx.guild.id})
-    channel_name = get_from_database['channel_name']
-   
-    return channel_name
+    get_from_database = quotes_channels.find_one({'server': ctx.guild.id})    
+    if get_from_database is None:
+        await ctx.send("No quotes channel found")
+        return QUOTES_CHANNEL
+    else:
+        channel_name = get_from_database['channel_name']
+        return channel_name
 
 @bot.command()
 async def random_quote(ctx):
     global QUOTES_CHANNEL
 
     if QUOTES_CHANNEL == '':
-        QUOTES_CHANNEL = await get_quotes_channel(ctx)       
-    
+        QUOTES_CHANNEL = await get_quotes_channel(ctx)    
+        if QUOTES_CHANNEL == '':
+            return      
     try:
         channel = discord.utils.get(ctx.guild.channels, name=QUOTES_CHANNEL)
         messages = [message async for message in channel.history(limit=100)] #limit the bot to the last 100 messages
