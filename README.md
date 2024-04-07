@@ -21,3 +21,7 @@ Use this to generate a random quote from the channel specified with the first co
 Use this to add a new quote to your quotes channel, for example:
 
     !quote Hello, world!
+
+Use the following command to remove the quotes channel from the bot:
+
+    remove_quotes_channel
