@@ -29,3 +29,7 @@ Use the following command to remove the quotes channel from the bot:
 Use the following command to check which channel you have set as the quotes channel:
 
     !quotes_channel
+
+Use the following command to be insulted by the bot:
+
+    !vicious_mockery
