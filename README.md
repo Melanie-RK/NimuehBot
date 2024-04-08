@@ -25,3 +25,7 @@ Use this to add a new quote to your quotes channel, for example:
 Use the following command to remove the quotes channel from the bot:
 
     remove_quotes_channel
+
+Use the following command to check which channel you have set as the quotes channel:
+
+    quotes_channel
