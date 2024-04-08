@@ -102,5 +102,13 @@ async def remove_quotes_channel(ctx):
     else: 
       await ctx.send(f"Server does not have a quotes channel")
 
+@bot.command()
+async def quotes_channel(ctx):
+    get_from_database = quotes_channels.find_one({'server': ctx.guild.id})
+    if (get_from_database != None):
+        await ctx.send(f"Quotes channel is set to: {get_from_database.get('channel_name')}")
+    else:
+        await ctx.send("Server does not have a quotes channel")
+
 bot.run(TOKEN)
 
