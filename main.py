@@ -110,5 +110,9 @@ async def quotes_channel(ctx):
     else:
         await ctx.send("Server does not have a quotes channel")
 
+@bot.command()
+async def vicious_mockery(ctx):
+    await ctx.send(f"your mother was a hamster and your father smells of elderberries, {ctx.author.mention}")
+
 bot.run(TOKEN)
 
