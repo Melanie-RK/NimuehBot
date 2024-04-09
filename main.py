@@ -1,6 +1,7 @@
 import random
 import pymongo
 import discord
+from vicious_mockery import random_insult
 from discord.ext import commands
 
 QUOTES_CHANNEL = ""
@@ -112,7 +113,8 @@ async def quotes_channel(ctx):
 
 @bot.command()
 async def vicious_mockery(ctx):
-    await ctx.send(f"your mother was a hamster and your father smells of elderberries, {ctx.author.mention}")
+    insult = random_insult()
+    await ctx.send(f"{insult}, {ctx.author.mention}")
 
 bot.run(TOKEN)
 
