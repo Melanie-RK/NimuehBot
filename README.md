@@ -4,6 +4,10 @@ Default command prefix is !. To use any command, start your message with this ch
 
 ## Available commands
 
+    !help
+
+Use this to get a DM with all available commands
+
     !set_quotes_channel
 
 Use this to set the Discord channel you would like to quote from.
