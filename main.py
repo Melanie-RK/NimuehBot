@@ -1,6 +1,7 @@
 import random
 import pymongo
 import discord
+from help_command import NewHelpCommand
 from vicious_mockery import random_insult
 from discord.ext import commands
 
@@ -31,11 +32,12 @@ intents.message_content = True
 
 bot = commands.Bot(command_prefix='!', intents=intents)
 
+bot.help_command = NewHelpCommand()
+
 @bot.event
 async def on_ready():
     print(f'Logged in as {bot.user} (ID: {bot.user.id})')
     print('------')
-
 
 @bot.command()
 async def set_quotes_channel(ctx, arg):
