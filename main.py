@@ -88,6 +88,12 @@ async def random_quote(ctx):
 
 @bot.command()
 async def quote(ctx,*, arg):
+    global QUOTES_CHANNEL
+
+    if QUOTES_CHANNEL == '':
+        QUOTES_CHANNEL = await get_quotes_channel(ctx)    
+        if QUOTES_CHANNEL == '':
+            return 
     try:
         channel = discord.utils.get(ctx.guild.channels, name=QUOTES_CHANNEL)
         await channel.send(arg)
