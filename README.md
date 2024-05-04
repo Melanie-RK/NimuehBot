@@ -33,3 +33,7 @@ Use the following command to check which channel you have set as the quotes chan
 Use the following command to be insulted by the bot:
 
     !vicious_mockery
+
+Use the following command to get a random cake:
+
+    !cake
