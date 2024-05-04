@@ -2,6 +2,7 @@ import random
 import pymongo
 import discord
 from vicious_mockery import random_insult
+from cake import random_cake
 from discord.ext import commands
 
 QUOTES_CHANNEL = ""
@@ -121,6 +122,11 @@ async def quotes_channel(ctx):
 async def vicious_mockery(ctx):
     insult = random_insult()
     await ctx.send(f"{insult}, {ctx.author.mention}")
+
+@bot.command()
+async def cake(ctx):
+    cake = random_cake()
+    await ctx.send(f"{cake}")
 
 bot.run(TOKEN)
 
