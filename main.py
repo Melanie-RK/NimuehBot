@@ -123,7 +123,7 @@ async def vicious_mockery(ctx):
     insult = random_insult()
     await ctx.send(f"{insult}, {ctx.author.mention}")
 
-@bot.command()
+@bot.command(aliases=['bake'])
 async def cake(ctx):
     cake = random_cake()
     await ctx.send(f"{cake}")
