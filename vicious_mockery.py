@@ -24,7 +24,8 @@ vicious_mockery = [
     "Ah, now here's a specimin with a charm truly rivaled only by that of their own intellect",
     "Honestly, is this the life your mother wanted for you",
     "I must commend your courage, it takes a brave soul to show up disarmed to a duel of wits",
-    "I have two minutes to kill, tell me everything you know" 
+    "I have two minutes to kill, tell me everything you know",
+    "Your birth certificate is an apology letter from the condom factory, " 
 ]
 
 def random_insult():
